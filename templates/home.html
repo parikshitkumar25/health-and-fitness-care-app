@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}Health and Fitness Tracker{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    
+</head>
+<body>
+    
+    <nav>
+        <h2>HEALTH AND FITNESS TRACKER</h2 n>
+           
+            
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="/registration">Registration</a></li>
+            <li> {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            {% endif %}
+            <li class="profile"><a href="/profile">Profile</a></li>
+            
+            
+            
+        </ul>
+    </nav>
+    <main>
+   
+
+        {% block content %}
+        <div class="main">
+            <div class="card">
+        <div class="image">
+         <img src="https://images.unsplash.com/photo-1518458717367-249ba15389d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZXhlcmNpc2UlMjBjaGFydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+         </div>   
+        <div class="title">
+            <h1> <a href="/exercise_form">Exercise</a>
+            </div>
+        </div>
+        
+        <div class="card">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdvYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+        </div>
+        <div class="title">
+            <h1><a href="/exercise_history">Exercise History</a></h1>
+        </div>
+    </div>
+        
+    <div class="card">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bnV0cml0aW9uJTIwdGFyY2tpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+        </div>
+        <div class="title">
+            <h1><a href="/add_nutrition">Nutrition Tracking</a> </h1>
+        </div>
+    </div>
+
+        <div class="card">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG51dHJpdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+        </div>
+        <div class="title">
+            <h1><a href="/nutrition_history">Nutrition History</a></h1>
+        </div>
+    </div>
+
+
+<div class="card">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1585776245865-b92df54c6b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z29hbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+        </div>
+        <div class="title">
+            <h1> <a href="/create_goal">Set Goals</a></h1>
+        </div>
+    </div>
+
+        
+
+
+
+        
+        <div class="card">
+        <div class="image">
+            <img src="https://plus.unsplash.com/premium_photo-1674489620667-eaf4a0094996?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGtlZXAlMjBnb2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+        </div> 
+        <div class="title">
+          <h1>  <a href="/active_goal">Active Goals</a>
+          </h1></div>
+          
+        
+        {% endblock %}
+        </div>
+        </div>   
+    </main>
+    <footer>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>About Us</h4>
+                        <p>We are a team of health and fitness enthusiasts who are passionate about helping people live healthier lives. We believe that everyone can achieve their fitness goals with hard work and dedication.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Contact Us</h4>
+                        <p>Email: <a href="mailto:info@healthandfitnesstracker.com">info@healthandfitnesstracker.com</a></p>
+                        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Social Media</h4>
+                        <a href="https://www.facebook.com/healthandfitnesstracker"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/healthandfitness"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/healthandfitnesstracker"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+</body>
+</html>

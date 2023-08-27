@@ -1,0 +1,56 @@
+body {
+  background-image: url('https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .input-container {
+    margin-bottom: 45px;
+    align-items: center;
+    
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  button {
+    background-color: #ebf0f1;
+    margin-left: 45%;
+    color: rgb(12, 11, 12);
+    padding: 10px;
+    border: 5px solid black;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .exercise-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }

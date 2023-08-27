@@ -1,0 +1,23 @@
+{% load static %}
+<body>
+  
+<h1>Your Active Goals</h1>
+<link rel="stylesheet" href="{% static 'active_goal.css' %}">
+
+{% for goal in active_goals %}
+<div class="main">
+  <div class="card">
+    <div class="h2">
+    
+    <h2>{{ goal.goal_type }}</h2></div>
+    <div class="tp">
+    <p>{{ goal.target_date }}</p></div>
+    <div class="obj">
+    <p>{{ goal.specific_objectives }}</p></div>
+    <div class="prog">
+    <p>Progress: {{ goal.progress }}</p></div>
+    </div>
+  </div>
+</main>
+{% endfor %}
+</body>

@@ -1,0 +1,29 @@
+{% load static %}
+<h1>Set Your Fitness Goals</h1>
+<link rel="stylesheet" href="{% static 'create_goal.css' %}">
+
+<form method="post">
+  {% csrf_token %}
+
+  <div class="form-group">
+    <label for="goal-type">Goal Type</label>
+    <select id="goal-type" name="goal_type">
+      <option value="weight-loss">Weight Loss</option>
+      <option value="muscle-gain">Muscle Gain</option>
+      <option value="endurance-improvement">Endurance Improvement</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="target-date">Target Date</label>
+    <input type="date" id="target-date" name="target_date">
+  </div>
+
+  <div class="form-group">
+    <label for="specific-objectives">Specific Objectives</label>
+    <textarea id="specific-objectives" name="specific_objectives" rows="5"></textarea>
+  </div>
+
+  <button type="submit">Create Goal</button>
+</form>
+

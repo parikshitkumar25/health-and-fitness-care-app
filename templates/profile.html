@@ -1,0 +1,23 @@
+<form action="{% url 'profile' %}" method="post">
+  {% csrf_token %}
+  
+  <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" value="{{ form.username.value }}">
+  </div>
+  
+  <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="{{ form.email.value }}">
+  </div>
+  
+  <div class="form-group">
+      <label for="date_of_birth">Date of Birth</label>
+      <input type="date" id="date_of_birth" name="date_of_birth" value="{{ form.date_of_birth.value }}">
+  </div>
+  
+  <button type="submit">Update Profile</button>
+</form>
+
+<a href="{% url 'change_password' %}">Change Password</a>
+

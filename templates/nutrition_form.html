@@ -1,0 +1,10 @@
+
+<form action="/add_nutrition/" method="post">
+  {% csrf_token %}
+  <input type="text" name="food" placeholder="Meal name">
+  <input type="number" name="calories" placeholder="Calories">
+  <input type="number" name="fat" placeholder="Fat (grams)">
+  <input type="number" name="protein" placeholder="Protein (grams)">
+  <input type="number" name="carbs" placeholder="Carbs (grams)">
+  <input type="submit" value="Submit">
+</form>

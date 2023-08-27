@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+  
+<h1>Nutrition History</h1>
+  <body>
+    
+<link rel="stylesheet" href="{% static 'nutritition_history.css' %}"> 
+<body>
+<div classs="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Meal</th>
+      <th>Calories</th>
+      <th>Fat</th>
+      <th>Protein</th>
+      <th>Carbs</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for nutrition in nutrition_list %}
+      <tr>
+        <td>{{ nutrition.date }}</td>
+        <td>{{ nutrition.meal_name }}</td>
+        <td>{{ nutrition.calories }}</td>
+        <td>{{ nutrition.fat }}</td>
+        <td>{{ nutrition.protein }}</td>
+        <td>{{ nutrition.carbs }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>  
+</table>
+
+<h2 class="head2">Nutrition Statistics</h2>
+
+<ul>
+  <li>Total calories: {{ nutrition_statistics.total_calories }}</li>
+  <li>Total fat: {{ nutrition_statistics.total_fat }}</li>
+  <li>Total protein: {{ nutrition_statistics.total_protein }}</li>
+  <li>Total carbs: {{ nutrition_statistics.total_carbs }}</li>
+  <li>
+  
+</ul>
+</div>
+</body>
+</html>

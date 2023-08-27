@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+  <h1>Settings</h1>
+
+  <form action="{% url 'settings' %}" method="post">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+
+    <div class="form-group">
+      <label for="password_confirm">Confirm Password</label>
+      <input type="password" id="password_confirm" name="password_confirm">
+    </div>
+
+    <div class="form-group">
+      <label for="notification_settings">Notification Settings</label>
+      <input type="checkbox" id="notification_settings" name="notification_settings">
+      <label for="notification_settings">Send me email notifications when my goals are updated</label>
+    </div>
+    
+    <div class="form-group">
+        <label for="date_of_birth">Date of Birth</label>
+        <input type="date" id="date_of_birth" name="date_of_birth">
+      </div>
+    <button type="submit">Save Settings</button>
+  </form>
+{% endblock %}

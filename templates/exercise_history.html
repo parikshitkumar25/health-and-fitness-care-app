@@ -1,0 +1,33 @@
+
+
+
+
+
+{% block title %}Exercise History{% endblock %}
+{%load static%}
+{% block content %}
+  <h2></h2>
+  <link rel="stylesheet" href="{% static 'exercise_history.css' %}"> 
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Exercise Type</th>
+        <th>Duration</th>
+        <th>Intensity</th>
+        
+         
+      </tr>
+    </thead>
+    <tbody>
+      {% for exercise in exercises %}
+      <tr>
+          <td>{{ exercise.date }}</td>
+          <td>{{ exercise.exercise_type }}</td>
+          <td>{{ exercise.duration }}</td>
+          <td>{{ exercise.intensity }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
